@@ -19,7 +19,7 @@ function ProductsDetails() {
     // call a backend api, get the result and store it in variable
     async function getProducts() {
       try {
-        const response = await axios.get("http://localhost:3001/api/dishes");
+        const response = await axios.get("https://food-app-2024.vercel.app/api/dishes");
         setProducts(response.data);
         setLoading(false);
         console.log(response.data);
