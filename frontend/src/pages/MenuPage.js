@@ -3,7 +3,7 @@ import { Row, Col } from "react-bootstrap";
 import { useState, useEffect } from "react";
 import { data } from "../Data/Products.js";
 import axios from "axios";
-import CustomCard from "../components/card.js";
+import CustomCard from "../components/Card.js";
 import NewNavbar from "../components/NewNavbar.js";
 // import SearchBar from './Search.js';
 

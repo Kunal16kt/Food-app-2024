@@ -6,10 +6,10 @@ import { NavLink } from "react-router-dom";
 const NewNavbar = ({ handleTabClick }) => {
   const [activeTab, setActiveTab] = useState("");
 
-  const tabs = ["All", "Foods", "Drinks", "Bestseller"];
+  const tabs = ["All", "Foods", "Drinks"];
 
   return (
-    <Navbar expand="lg" className="mb-4 navbar-light bg-light" style={{ backgroundColor: "#e3f2fd" }}>
+    <Navbar expand="lg" className="mb-4 navbar-light bg-light">
       <Container>
         
         <Navbar.Toggle aria-controls="navbarTogglerDemo02" />

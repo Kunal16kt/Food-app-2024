@@ -7,7 +7,6 @@ import Hero from "./pages/HomePage";
  import SignUp from './pages/SignUpPage';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import Login from "./pages/LoginPage";
-// import ProductsDetails from "./components/ProductsDetails";
 import Contact from "./pages/ContactPage";
 import About from "./pages/AboutPage";
 import Cart from "./pages/CartPage";
