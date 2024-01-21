@@ -1,7 +1,7 @@
 import React from "react";
 import { Row, Col } from "react-bootstrap";
 import { useState, useEffect } from "react";
-import { data } from "../Data/Products.js";
+// import { data } from "../Data/Products.js";
 import axios from "axios";
 import CustomCard from "../components/Card.js";
 import NewNavbar from "../components/NewNavbar.js";
@@ -12,7 +12,6 @@ function ProductsDetails() {
   const [loading, setLoading] = useState(true);
   const [foodOnly, setFoodOnly] = useState();
   const [beveragesOnly, setBeveragesOnly] = useState();
-  const [bestseller, setBestseller] = useState();
   const [cart, setCart] = useState([]);
 
   useEffect(() => {
@@ -23,9 +22,8 @@ function ProductsDetails() {
         setProducts(response.data);
         setLoading(false);
         console.log(response.data);
-        setFoodOnly(data.filter((item) => item.category === "food"));
-        setBeveragesOnly(data.filter((item) => item.category === "beverages"));
-        setBestseller(data.filter((item) => item.category === "bestseller"));
+        setFoodOnly(response.data.filter((item) => item.category === "food"));
+        setBeveragesOnly(response.data.filter((item) => item.category === "beverages"));
       } catch (error) {
         console.error(error);
       }
@@ -47,8 +45,6 @@ function ProductsDetails() {
       case "drinks":
         setProducts(beveragesOnly);
         break;
-      case "bestseller":
-        setProducts(bestseller);
       default:
         break;
     }
