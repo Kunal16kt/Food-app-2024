@@ -29,10 +29,12 @@ function ProductsDetails() {
       }
     }
     getProducts();
-    console.log("Inside useEffect");
-    const storedCart = JSON.parse(localStorage.getItem("cart")) || [];
-    setCart(storedCart);
+    
   }, []);
+
+  const handleAddToCart = (selectedProduct) => {
+    setCart((prevCart) => [...prevCart, selectedProduct]);
+  };
   // handletabclick is for filtering data based on category of food
   const handleTabClick = (tab) => {
     switch (tab) {
@@ -49,14 +51,7 @@ function ProductsDetails() {
         break;
     }
   };
-
-  const addToCart = (product) => {
-    const updatedCart = [...cart, { ...product, quantity: 1 }];
-    setCart(updatedCart);
-
-    // Save updated cart to localStorage
-    localStorage.setItem("cart", JSON.stringify(updatedCart));
-  };
+   
 
   return loading ? (
     <p>Loading ......</p>
@@ -74,11 +69,12 @@ function ProductsDetails() {
             <Col key={product.id} className="mb-4 mt-4">
               {/*  using custom card  from component card*/}
               <CustomCard
-                img={product.img}
-                name={product.name}
-                category={product.category}
-                price={product.price}
-                addToCart={() => addToCart(product)}
+                product={product}
+                // img={product.img}
+                // name={product.name}
+                // category={product.category}
+                // price={product.price}
+                addToCart={() => handleAddToCart(product)}
               />
             </Col>
           ))}

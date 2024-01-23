@@ -12,7 +12,7 @@ const Slides = () => {
     }).init();
   })
   return (
-    <div className="bg-light text-dark container px-4 py-5 display-cover p-0 objectFit-cover wow bounceInUp" data-wow-delay="0.3s">
+    <div className="bg-light text-dark container w-full px-4 py-5 display-cover p-0 objectFit-cover wow bounceInUp" data-wow-delay="0.3s">
       <section className="favourites-section">
         <Container>
           <Row>

@@ -31,8 +31,12 @@ function App() {
     setTabs(['Home', 'About', 'Contact']);
     return <Navigate to="/" />;
   };
+  // const customStyles = {
+  //   backgroundColor: '#E6AB6C', // Use the given color code
+  // };
   return (
-    <Router>
+    
+    <Router >
     <CustomNavbar tabs={tabs} isLoggedIn={isLoggedIn}  handleLogout={handleLogout} />
    
     <Routes>
@@ -49,6 +53,7 @@ function App() {
     
     <Footer />
   </Router>
+  
   );
 }
 

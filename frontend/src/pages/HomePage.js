@@ -21,12 +21,14 @@ const Hero = ({ isLoggedIn, handleLogout }) => {
   //   localStorage.removeItem("user");
   //   window.location.reload();
   // };
-  
+  // const customStyles = {
+  //   backgroundColor: '#E6AB6C', // Use the given color code
+  // };
 
   return (
     <div>
      {/* using hero section from bootstrap */}
-    <div class="container col-xxl-8 px-4 py-5">
+    <div class="container col-xxl-8 px-4 py-5" >
         <div class="row flex-lg-row-reverse align-items-center g-5 py-5">
             {/* using wow.js animation in below line for logo animation */}
           <div class="col-10 col-sm-8 col-lg-6 wow pulse animated" data-wow-delay="300ms" data-wow-iteration="infinite" data-wow-duration="2s"> 
@@ -48,7 +50,7 @@ const Hero = ({ isLoggedIn, handleLogout }) => {
     </div>
     <Slides />
     {/* using hero section from bootstrap */}
-    <div class="container col-xxl-8 px-4 py-5">
+    <div class="container col-xxl-8 px-4 py-5" >
         <div class="row flex-lg-row align-items-center g-5 py-5">
              {/* using wow.js animation in below line for logo animation */}
           <div class="col-10 col-sm-8 col-lg-6 wow slideInLeft" data-wow-delay="0.3s">

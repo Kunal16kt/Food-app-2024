@@ -103,7 +103,7 @@ const Footer = () => {
                     </a>
                   </li>
                 </ul>
-                <br></br>
+                
                 <h3 className="footer-heading">Secure Payments By</h3>
               <img src="https://webthemez.com/wp-content/uploads/2019/07/payment-paypal-icons.png" alt="instagram" />
               </div>

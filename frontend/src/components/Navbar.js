@@ -1,21 +1,22 @@
 import React, { useState }from "react";
 import { Navbar, Nav, Container, Button } from "react-bootstrap";
-
 import { NavLink } from "react-router-dom";
-
-
 
 const CustomNavbar = ({ tabs = [], isLoggedIn, handleLogout }) => {
   const [activeTab, setActiveTab] = useState("");
 
   const handleTabClick = (tab) => {
     setActiveTab(tab.toLowerCase());
-  };
+  }; 
+  // const customStyles = {
+  //   backgroundColor: '#ECA457', // Use the given color code
+  // };
   return (
     <Navbar
       // bg=" body-tertiary"
       expand="lg"
-      className="mb-4 bg-dark text-light"
+      className="mb-4 navbar-dark bg-dark text-light"
+      // style={customStyles}
     >
       <Container>
         <Navbar.Toggle aria-controls="navbarTogglerDemo02" />
